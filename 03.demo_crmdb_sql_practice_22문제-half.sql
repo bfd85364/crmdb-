@@ -64,6 +64,10 @@ select count(*), AVG(membership_points) as avg from customer group by grade havi
 # 19.  주문제품 및 주문고객별 총주문수량을 구하시오.
 select product_id, count(*), sum(quantity) from orders group by product_id, quantity ORDER BY product_id, quantity; 
 
+#아마 두번째게 맞는듯 
+
+SELECT product_id, cust_id, count(*)order_id FROM orders GROUP BY product_id, cust_id;  
+
 -- 응용문제
 # 20.  주문년도별 총주문수량을 구하시오. 
 
